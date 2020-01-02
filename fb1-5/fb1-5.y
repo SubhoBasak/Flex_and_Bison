@@ -1,6 +1,7 @@
 %token NUM
 %token ADD SUB MUL DIV ABS
 %token EOL
+%token OP CP
 
 %{
 
@@ -32,6 +33,7 @@ factor
 term
 	: NUM { printf("num : %d\n", $1); }
 	| ABS term { $$ = $2 >= 0? $2 : - $2; }
+	| OP exp CP { $$ = $2; }
 	;
 
 %%
