@@ -9,4 +9,5 @@
 "clever" { printf("smart\n"); }
 "smart" { printf("clever\n"); }
 . { printf("%s\n", yytext); }
- %%
+
+%%
